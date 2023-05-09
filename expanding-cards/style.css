@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.container .panel {
+  position: relative;
+  flex: 1;
+  margin: 10px;
+  border-radius: 50px;
+  height: 80vh;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .7s ease-in;
+}
+
+.container .panel.active {
+  flex: 10;
+}
+
+.container .panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity .3s ease-in .4s;
+}
+
+.container .panel.active h3 {
+  opacity: 1;
+}
